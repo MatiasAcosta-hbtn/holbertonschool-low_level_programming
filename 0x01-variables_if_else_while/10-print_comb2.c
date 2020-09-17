@@ -12,21 +12,18 @@ int main(void)
 	int i = 0;
 	int d = 0;
 
-	for(i=0; i<10; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for(d=0;d<10;d++)
+		for (d = 0; d < 10; d++)
 		{
-			
 			putchar(numbers[i]);
 			putchar(numbers[d]);
-			if(d !=9 || i != 9)
+			if (d != 9 || i != 9)
 			{
 				putchar(' ');
 				putchar(',');
 			}
 		}
-		
-			
 	}
 	putchar('\n');
 	return (0);
