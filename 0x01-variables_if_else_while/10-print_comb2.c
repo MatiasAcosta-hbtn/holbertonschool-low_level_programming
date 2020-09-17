@@ -19,8 +19,8 @@ int main(void)
 			putchar(d);
 			if (d != 57 || i != 57)
 			{
-				putchar(' ');
-				putchar(',');
+				putchar(32);
+				putchar(44);
 			}
 		}
 	}
