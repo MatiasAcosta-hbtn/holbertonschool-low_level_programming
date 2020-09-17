@@ -8,13 +8,16 @@
 
 int main(void)
 {
-	char hexa[] = "123456789abcdef\n";
-	unsigned int i = 0;
+	int i = 0;
 
-	while (i <= 17)
+	for (i = 48; i <= 57; i++)
 	{
-		putchar(hexa[i]);
-		i++;
+		putchar(i);
 	}
+	for (i = 97; i <= 102; i++)
+	{
+		putchar(i);
+	}
+	putchar('\n');
 	return (0);
 }
