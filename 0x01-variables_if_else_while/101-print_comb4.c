@@ -18,6 +18,10 @@ int main(void)
 		{
 			for (j = 48; j <= 57; j++)
 			{
+				if ((i == d && i == j) || (i > d && d > j))
+				{
+					continue;
+				}
 				putchar(i);
 				putchar(d);
 				putchar(j);
