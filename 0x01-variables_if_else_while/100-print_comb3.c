@@ -15,9 +15,13 @@ int main(void)
 	{
 		for (d = 48; d <= 57; d++)
 		{
+			if(i == d || i > d)
+			{
+				continue;
+			}	
 			putchar(i);
 			putchar(d);
-			if (d != 57 || i != 57)
+			if (d != 57 || i != 56)
 			{
 				putchar(44);
 				putchar(32);
