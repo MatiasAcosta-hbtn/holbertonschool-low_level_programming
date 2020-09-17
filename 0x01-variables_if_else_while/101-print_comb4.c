@@ -29,7 +29,7 @@ int main(void)
 				putchar(i);
 				putchar(d);
 				putchar(j);
-				if (d != 57 || i != 57 || j != 57)
+				if (d != 56 || i != 55 || j != 57)
 				{
 					putchar(44);
 					putchar(32);
