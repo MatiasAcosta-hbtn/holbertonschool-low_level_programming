@@ -6,6 +6,7 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
+	/* DEFINITION OF MAIN FUNCTION */	
 	int n;
 
 	srand(time(0));
