@@ -8,13 +8,13 @@
 
 int main(void)
 {
-	char numbers[] = "0123456789\n";
-	unsigned int i = 0;
+	unsigned int i = 48;
 
-	while (i < 11)
+	while (i < 58)
 	{
-		putchar(numbers[i]);
+		putchar(i);
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
