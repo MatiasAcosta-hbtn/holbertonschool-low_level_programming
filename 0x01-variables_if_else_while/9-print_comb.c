@@ -8,13 +8,19 @@
 
 int main(void)
 {
-	char hexa[] = "123456789abcdef\n";
+	char numbers[] = "0123456789";
 	unsigned int i = 0;
 
-	while (i <= 17)
+	while (i < 10)
 	{
-		putchar(hexa[i]);
+		putchar(numbers[i]);
+		if (i != 9)
+		{
+			putchar(' ');
+			putchar(',');
+		}
 		i++;
 	}
+	putchar('\n');
 	return (0);
 }
