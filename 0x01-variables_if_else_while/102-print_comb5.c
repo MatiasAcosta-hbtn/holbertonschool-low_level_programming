@@ -21,15 +21,15 @@ int main(void)
 			{
 				for (k = 48; k <= 57; k++)
 				{
-					if(i == d && j == k)
+					if (i == d && j == k)
 					{
 						continue;
 					}
-					if(i ==d && j > k)
+					if (i == d && j > k)
 					{
 						continue;
 					}
-					if(i>d)
+					if (i > d)
 					{
 						continue;
 					}
