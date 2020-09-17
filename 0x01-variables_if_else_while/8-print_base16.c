@@ -8,10 +8,10 @@
 
 int main(void)
 {
-	char hexa[]="123456789abcdef";
+	char hexa[] = "123456789abcdef";
 	unsigned int i = 0;
 
-	while (i <=16)
+	while (i <= 16)
 	{
 		putchar(hexa[i]);
 		i++;
