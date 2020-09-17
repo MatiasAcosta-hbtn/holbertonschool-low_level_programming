@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /**
  * main - Entry point
  *
@@ -7,13 +8,12 @@
 
 int main(void)
 {
-	char numbers[] = "0123456789";
+	char numbers[] = "0123456789\n";
 	unsigned int i = 0;
 
-	while (i < 10)
+	while (i < 11)
 	{
 		putchar(numbers[i]);
-		putchar('\n');
 		i++;
 	}
 	return (0);
