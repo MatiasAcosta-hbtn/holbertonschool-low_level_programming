@@ -8,17 +8,16 @@
 
 int main(void)
 {
-	char numbers[] = "0123456789";
 	int i = 0;
 	int d = 0;
 
-	for (i = 0; i < 10; i++)
+	for (i = 48; i <= 57; i++)
 	{
-		for (d = 0; d < 10; d++)
+		for (d = 48; d <= 57; d++)
 		{
-			putchar(numbers[i]);
-			putchar(numbers[d]);
-			if (d != 9 || i != 9)
+			putchar(i);
+			putchar(d);
+			if (d != 57 || i != 57)
 			{
 				putchar(' ');
 				putchar(',');
