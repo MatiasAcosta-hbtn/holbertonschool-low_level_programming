@@ -21,24 +21,15 @@ int main(void)
 			{
 				for (k = 48; k <= 57; k++)
 				{
-					if (i == d && j == k)
+					if (i < j || (i == j && d < k))
 					{
-						continue;
+						putchar(i);
+						putchar(d);
+						putchar(32);
+						putchar(j);
+						putchar(k);
+						putchar(44);
 					}
-					if (i == d && j > k)
-					{
-						continue;
-					}
-					if (i > d)
-					{
-						continue;
-					}
-					putchar(i);
-					putchar(d);
-					putchar(32);
-					putchar(j);
-					putchar(k);
-					putchar(44);
 				}
 			}
 		}
