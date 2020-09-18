@@ -23,12 +23,17 @@ int main(void)
 				{
 					if (i < j || (i == j && d < k))
 					{
-						putchar(i);
-						putchar(d);
-						putchar(32);
-						putchar(j);
-						putchar(k);
-						putchar(44);
+					putchar(i);
+					putchar(d);
+					putchar(32);
+					putchar(j);
+					putchar(k);
+					if (i != 57 || d != 56 || j != 57 || k != 57)
+					{
+					putchar(44);
+					putchar(32);
+					
+						}
 					}
 				}
 			}
