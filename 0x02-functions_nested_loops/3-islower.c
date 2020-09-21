@@ -2,7 +2,7 @@
 /**
  * _islower - return if the letter is lower or upper case
  *
- * c - the character received
+ * @c: the character received
  * Return: Always 0 (Success)
  */
 

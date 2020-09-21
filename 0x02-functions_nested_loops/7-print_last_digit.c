@@ -1,13 +1,13 @@
 #include "holberton.h"
 /**
- * main - Entry point
- *
+ * print_last_digit - print the last digit of a number
+ * @n: the number received
  * Return: Always 0 (Success)
  */
 
 int print_last_digit(int n)
 {
-	if(n >= 0)
+	if (n >= 0)
 		n = (n % 10) + 48;
 	else
 	{

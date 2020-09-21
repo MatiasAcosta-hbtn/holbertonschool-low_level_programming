@@ -1,17 +1,17 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_to_98 - print the numbers to 98
+ * @n - the number received
+ * Return: don't return
  */
 void print_to_98(int n)
 {
-	for (n=n; n <=98; n++)
+	for (n = n; n <= 98; n++)
 	{
-		printf("%i",n);
-		if(n != 98)
+		printf("%i", n);
+		if (n != 98)
 			printf(", ");
 	}
-printf("\n");	
+printf("\n");
 }

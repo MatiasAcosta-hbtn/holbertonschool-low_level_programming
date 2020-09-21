@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * main - Entry point
- *
+ * _isalpha - show what char is alphabetic
+ * @c: the char received
  * Return: Always 0 (Success)
  */
 
