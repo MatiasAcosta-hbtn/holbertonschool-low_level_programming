@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * main - Entry point
  *
@@ -7,23 +7,25 @@
  */
 void print_times_table(int n)
 {
-int i, j, res;
+int i, j, sig, res;
 
-if (n > 0 && n <= 15){
+n += 48;
+if (n > 48 && n <= 15 + 48){
 
-	for (i = 48; i <= n + 48; i++)
+	for (i = 48; i <= n; i++)
 	{
-		for (j = 48; j <= n + 48; j++)
+		for (j = 48; j <= n; j++)
 		{
 			res = (i - 48) * (j - 48);
+			sig = (i -48) * ((j+1) - 48);
 			if (res > 99)
 			{	
-				/*_putchar((res/100) + 48);
-				_putchar(((res /100) % 10) + 48);
-				 _putchar((res % 10) + 48);*/
-				printf("%d%d%d\n ", (res/100),(res %100) /10, res % 10);
+				_putchar((res/100) + 48);
+				_putchar(((res /10) % 10) + 48);
+				 _putchar((res % 10) + 48);
+				
 			}
-			if (res > 9)
+			else if (res > 9)
 			{
 		
 				_putchar((res / 10) + 48);
@@ -31,9 +33,15 @@ if (n > 0 && n <= 15){
 			}
 			else
 				_putchar(res + 48);
-				_putchar(44);
-				_putchar(32);
-			
+			if (j != n)
+				_putchar(',');
+			if (res <= 9 && sig <= 9)
+			{
+				_putchar(' ');
+				_putchar(' ');
+			} else if ( res <= 99 && sig <= 99)
+				_putchar(' ');
+			_putchar(' ');
 	}
 	_putchar(10);
 }
