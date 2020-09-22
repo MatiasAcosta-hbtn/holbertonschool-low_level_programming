@@ -23,7 +23,13 @@ for (i = 48; i <= 57; i++)
 		if (j != 57)
 		{
 			_putchar(',');
-			_putchar(' ');
+			if(res <= 9)
+			{
+				_putchar(' ');
+				_putchar(' ');
+			}
+			else
+				_putchar(' ');
 		}
 	}
 	_putchar(10);
