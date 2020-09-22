@@ -32,14 +32,17 @@ if (n > 48 && n <= 63)
 			else
 				_putchar(res + 48);
 			if (j != n)
-				_putchar(',');
-			if (res <= 9 && sig <= 9)
 			{
-				_putchar(' ');
-				_putchar(' ');
-			} else if (res <= 99 && sig <= 99)
-				_putchar(' ');
+				_putchar(',');
+				if (res <= 9 && sig <= 9)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else if (res <= 99 && sig <= 99)
+					_putchar(' ');
 			_putchar(' ');
+			}
 	}
 	_putchar(10);
 }
