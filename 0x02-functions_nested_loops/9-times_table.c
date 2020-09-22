@@ -24,7 +24,7 @@ for (i = 48; i <= 57; i++)
 		if (j != 57)
 		{
 			_putchar(',');
-			if (res <= 9 && sig <= 9 && sig + 48 <= 57)
+			if (res <= 9 && sig <= 9 && j <= 57)
 				_putchar(' ');
 			_putchar(' ');
 			}
