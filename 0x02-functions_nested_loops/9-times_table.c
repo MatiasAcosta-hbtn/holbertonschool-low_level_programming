@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * times_table - Show the tables
  *
  * Return: Always 0 (Success)
  */
@@ -23,7 +23,7 @@ for (i = 48; i <= 57; i++)
 		if (j != 57)
 		{
 			_putchar(',');
-			if(res <= 9)
+			if (res <= 9)
 			{
 				_putchar(' ');
 				_putchar(' ');
