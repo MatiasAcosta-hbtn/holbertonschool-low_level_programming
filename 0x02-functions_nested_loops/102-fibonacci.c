@@ -11,7 +11,7 @@ int main(void)
 int count;
 long int a = 0, b = 1, c;
 
-for (count = 0; count <= 50; count++)
+for (count = 0; count < 50; count++)
 {
 	c = a + b;
 	printf("%ld", c);
