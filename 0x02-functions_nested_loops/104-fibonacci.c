@@ -16,7 +16,7 @@ for (count = 0; count <= 98; count++)
 	c = a + b;
 	a = b;
 	b = c;
-	printf("%li", c);
+	printf("%lu", c);
 	if (count != 98)
 		printf(", ");
 }
