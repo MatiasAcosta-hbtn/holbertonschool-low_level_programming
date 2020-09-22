@@ -14,11 +14,9 @@ void print_alphabet_x10(void)
 		{
 			_putchar(j);
 		}
-		if (i != 9)
+		if (i <= 9)
 		{
 			_putchar('\n');
 		}
 	}
-	_putchar(10);
-	_putchar('c');
 }
