@@ -10,7 +10,7 @@ void print_times_table(int n)
 int i, j, sig, res;
 
 n += 48;
-if (n > 48 && n <= 63)
+if (n >= 48 && n <= 63)
 {
 	for (i = 48; i <= n; i++)
 	{
