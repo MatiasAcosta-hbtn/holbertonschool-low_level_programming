@@ -8,13 +8,14 @@
 
 void print_number(int n)
 {
-	int cont = 1, i, pow, dig = n, a;
+	int cont = 1, i, pow, dig, a;
 
 	if (n < 0)
 	{
 		n = -n;
 		_putchar('-');
 	}
+	dig = n;
 	while (dig / 10 != 0)
 	{
 		dig /= 10;
