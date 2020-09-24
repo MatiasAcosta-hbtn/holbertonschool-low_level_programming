@@ -1,20 +1,5 @@
 #include "holberton.h"
-
-/**
- * pot - pow of the num
- * @num: number of pow
- * @potencia: pow of num
- * Return: the pow
- */
-
-int pot(int num, int potencia)
-{
-	int i, j = 1;
-
-	for (i = 0; i < (potencia - 1); i++)
-		j *= num;
-	return (j);
-}
+#include <stdio.h>
 
 /**
  * print_number - print number like printf
@@ -23,13 +8,13 @@ int pot(int num, int potencia)
 
 void print_number(int n)
 {
-	int cont = 1, i, pow, dig;
+	int cont = 1, i, pow, dig = n, a;
+
 	if (n < 0)
 	{
 		n = -n;
 		_putchar('-');
 	}
-	dig = n;
 	while (dig / 10 != 0)
 	{
 		dig /= 10;
@@ -37,7 +22,9 @@ void print_number(int n)
 	}
 	for (i = cont; i > 0; i--)
 	{
-		pow = pot(10, i);
+		pow = 1;
+		for (a = 0; a < (i - 1); a++)
+			pow *= 10;
 		_putchar('0' + (n / pow) % 10);
 	}
 }
