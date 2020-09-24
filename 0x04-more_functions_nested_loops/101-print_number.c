@@ -23,13 +23,14 @@ int pot(int num, int potencia)
 
 void print_number(int n)
 {
-	int cont = 1, i, dig = n, pow;
+	int cont = 1, i, pow;
 
 	if (n < 0)
 	{
 		n = -n;
 		_putchar('-');
 	}
+	int dig = n;
 	while (dig / 10 != 0)
 	{
 		dig /= 10;
