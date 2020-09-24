@@ -23,7 +23,7 @@ int pot(int num, int potencia)
 
 void print_number(int n)
 {
-	int cont = 1, i, dig = n, pow;
+	int cont = 1, i, dig = n, a, b = 1;
 
 	if (n < 0)
 	{
@@ -37,8 +37,7 @@ void print_number(int n)
 	}
 	for (i = cont; i > 0; i--)
 	{
-		pow = pot(10, i);
-		_putchar('0' + (n / pow) % 10);
+		a = pot(10,i);
+		_putchar('0' + (n / a) % 10);
 	}
-
 }
