@@ -6,7 +6,7 @@
 
 void print_number(int n)
 {
-     	unsigned int cont = 1, i, pow, dig, a;
+	unsigned int cont = 1, i, pow, dig, a;
 
 	if (n < 0)
 	{
