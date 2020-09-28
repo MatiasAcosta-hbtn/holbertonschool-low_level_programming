@@ -5,15 +5,11 @@
  * @str: the string received
  */
 
-void puts2(char *str)
+void print_array(int *a, int n)
 {
 	int i = 0;
+	int arr[n] = *a;
 
-	while (*(str + i) != 0)
-	{
-	if (i % 2 == 0)
-		_putchar(*(str + i));
-	i++;
-	}
-	_putchar(10);
+/*	for (i = 0; i < n; i++)
+		printf("%d, ", arr[i]);	 */
 }
