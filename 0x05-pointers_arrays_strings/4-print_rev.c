@@ -1,19 +1,19 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * _puts - prints a text
- * @str: the text received
+ * print_rev - prints a reverse text
+ * @s: the text received
  */
 
-void _puts(char *str)
+void print_rev(char *s)
 {
 	int i = 0;
 
-	while (*(str + i) != 0)
+	while (*(s + i) != 0)
 		i++;
-	for (i = i; i >= 0; i--)
+	for (i = i - 1; i >= 0; i--)
 	{
-	_putchar(*(str + i));
+	_putchar(*(s + i));
 	}
 	_putchar(10);
 }

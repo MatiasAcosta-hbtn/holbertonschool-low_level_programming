@@ -5,15 +5,29 @@
  * @str: the text received
  */
 
-void _puts(char *str)
+void rev_string(char *s)
 {
-	int i = 0;
+	int i = 0, j=0;
+	printf("%lu,",sizeof(s));
 
-	while (*(str + i) != 0)
+/*	while (*(s + i) != 0)
+		i++;
+	char arr[i];
+
+	for (i = i - 1; i >= 0; i--)
 	{
-	i++;
+		arr[j] = *(s + i);
+		j++;
 	}
-	for (i = i; i >= 0; i--)
-		_putchar(*(str + i));
-	_putchar(10);
+	
+	for(
+	_putchar(10);*/
+}
+
+int main(void){
+
+char s[10];
+
+rev_string(s);
+
 }
