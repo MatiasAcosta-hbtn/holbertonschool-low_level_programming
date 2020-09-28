@@ -8,11 +8,10 @@
  */
 int _strlen(char *s){
 
-char arr = *s;
-int i, count;
+int i=0;
 
-for(i=0; i <= sizeof(arr)/sizeof(arr); i++){
-    count +=1;
-}
-return (count);
+while(*(s + i) != 0)
+        i++;
+
+return (i);
 }
