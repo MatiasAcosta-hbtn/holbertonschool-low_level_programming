@@ -1,33 +1,31 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * _puts - prints a text
- * @str: the text received
+ * rev_string - return the reverse of the string
+ * @s: the string received
  */
 
 void rev_string(char *s)
 {
-	int i = 0, j=0;
-	printf("%lu,",sizeof(s));
+int i = 0, j=0;
+char tfin, tin;
 
-/*	while (*(s + i) != 0)
-		i++;
-	char arr[i];
 
-	for (i = i - 1; i >= 0; i--)
-	{
-		arr[j] = *(s + i);
-		j++;
-	}
-	
-	for(
-	_putchar(10);*/
+while (*(s + i) != 0)
+i++;
+
+for (i = i - 1; i >= 0; i--)
+{
+tfin = *(s + i);
+tin = *(s + j);
+if (j >= i){
+break;
 }
-
-int main(void){
-
-char s[10];
-
-rev_string(s);
-
+else
+{
+*(s + i) = tin;
+*(s + j) = tfin;
+}
+j++;
+}
 }
