@@ -13,9 +13,16 @@ void puts_half(char *str)
 	{
 		i++;
 	}
-	for (j = 0; j <= i; j++)
+	if (i % 2 == 0)
 	{
-		if (j >= i / 2)
+	for (j = i / 2; j < i; j++)
+	{
+		_putchar(*(str + j));
+	}
+	}
+	else
+	{
+		for (j = (i - 1) / 2; j < i; j++)
 			_putchar(*(str + j));
 	}
 	_putchar(10);
