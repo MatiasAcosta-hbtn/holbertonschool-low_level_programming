@@ -1,21 +1,22 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * print_array - prints an array
- * @a: the array
- * @n: the lenght of the array
+ * _strcpy - copy a pointer includin the '\0'
+ * @dest: the destination
+ * @src: from this src
+ * Return: the dest pointer
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	int i=0, n=0;
+char *start = dest;
 
-	while(*(src + i) != 0)
-		i++;
-	printf("%d\n",i);
-	for (n=0; n < i; n++)
-	{
-		*(dest + n) = *(src + n);
-	}
-	return((char)*dest);
+while (*src != '\0')
+{
+	*dest = *src;
+	dest++;
+	src++;
+}
+	*dest = '\0';
+	return (start);
 }
