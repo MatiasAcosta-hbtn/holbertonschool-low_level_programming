@@ -1,5 +1,4 @@
-#include <stdio.h>
-
+#include "holberton.h"
 /**
  * _atoi - print a number of the string
  * @s: the string received
