@@ -1,61 +1,49 @@
 #include "holberton.h"
-
 /**
- * _atoi - copy string pointed
- * @s: character
- *
- * Return: pointed to dest
+ * _atoi - print a number of the string
+ * @s: the string received
+ * Return: the number
  */
 
 int _atoi(char *s)
 {
-	int len, signo, g, h, i, j, k, inicio, fin, largo, pot, sg, resultado;
+int len, i = 0, j = 0, largo = 0, signo = 0, k = 0;
+int  inicio = 0, fin = 0, pow = 0, a = 0;
+unsigned int res = 0;
 
-	sg = 1;
-	signo = 0;
-	inicio = 0;
-	fin = 0;
-	for (len = 0; s[len] != 0; len++)
+for (len = 0; s[len] != 0; len++)
+{
+}
+
+while (*(s + i) != 0)
+{
+	if (*(s + i) == 45)
+		signo++;
+	if (*(s + i) >= 48 && *(s + i) <= 57)
 	{
+		inicio = i;
+		fin = i;
+		break;
 	}
-	for (i = 0; i < len; i++)
-	{
-		if (*(s + i) == 45)
-		{
-			signo++;
-		}
-		if (s[i] >= 48 && s[i] <= 57)
-		{
-			inicio = i;
-			fin = i;
-			break;
-		}
-	}
-	for (k = i; k <= len; k++)
-	{
-		if (s[k] >= 48 && s[k] <= 57)
-		{
-			fin++;
-		}
-		else
-		{
-			break;
-		}
-	}
-	for (g = 0; g < signo; g++)
-	{
-		sg *= (-1);
-	}
-	resultado = 0;
-	largo = fin - inicio;
-	for (j = 0; j < largo; j++)
-	{
-		pot = 1;
-		for (h = j; h < largo - 1; h++)
-		{
-			pot = pot * 10;
-		}
-		resultado += (s[inicio + j] - 48) * pot;
-	}
-	return (resultado * sg);
+	i++;
+}
+for (k = inicio; k <= len; k++)
+{
+	if (*(s + k) >= '0' && *(s + k) <= '9')
+		fin++;
+	else
+		break;
+}
+largo = fin - inicio;
+for (j = 0; j < largo; j++)
+{
+	pow = 1;
+	for (a = j; a < largo - 1; a++)
+		pow *= 10;
+	res += (s[inicio + j] - 48) * pow;
+}
+if (signo % 2 == 0)
+	return (res);
+else
+	return (-res);
 }
