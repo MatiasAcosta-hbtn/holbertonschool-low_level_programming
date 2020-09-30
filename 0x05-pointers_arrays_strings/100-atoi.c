@@ -17,9 +17,9 @@ for (len = 0; s[len] != 0; len++)
 
 while (*(s + i) != 0)
 {
-	if (*(s + i) == '-')
+	if (*(s + i) == 45)
 		signo++;
-	if (*(s + i) >= '0' && *(s + i) <= '9')
+	if (*(s + i) >= 48 && *(s + i) <= 57)
 	{
 		inicio = i;
 		fin = i;
@@ -27,7 +27,7 @@ while (*(s + i) != 0)
 	}
 	i++;
 }
-for (k = inicio; k < len; k++)
+for (k = inicio; k <= len; k++)
 {
 	if (*(s + k) >= '0' && *(s + k) <= '9')
 		fin++;
