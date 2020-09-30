@@ -8,13 +8,13 @@
 
 int _atoi(char *s)
 {
-int i = 0, j = 0, largo = 0, signo = 1, res = 0, k = 0;
+int i = 0, j = 0, largo = 0, signo = 0, res = 0, k = 0;
 int  inicio = 0, fin = 0, pow = 0, a = 0;
 
 while (*(s + i) != 0)
 {
 	if (*(s + i) == '-')
-		signo *= -1;
+		signo++;
 	if (*(s + i) >= '0' && *(s + i) <= '9')
 	{
 		inicio = i;
@@ -38,5 +38,8 @@ for (j = 0; j < largo; j++)
 		pow *= 10;
 	res += (s[inicio + j] - 48) * pow;
 }
-return (res * signo);
+if (signo % 2 == 0)
+	return (res);
+else
+	return (-res);
 }
