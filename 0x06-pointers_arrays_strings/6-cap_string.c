@@ -9,7 +9,7 @@
 char *cap_string(char *s)
 {
 	int i = 0, j = 0;
-	int puntos[] = {33, 46, 59, 63, 123, 125, 40, 41, 44, 34, 10, 32, 9};
+	char puntos[] = ",;.!?\"(){}\n\t ";
 
 	while (*(s + i) != 0)
 	{
