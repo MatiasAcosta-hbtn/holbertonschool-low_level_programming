@@ -9,7 +9,7 @@ char *rot13(char *s)
 {
 	int i = 0, j = 0;
 	char letras[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char root13[] = "nopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char root13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	while (*(s + i) != 0)
 	{
