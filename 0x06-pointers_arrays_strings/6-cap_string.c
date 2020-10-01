@@ -23,7 +23,7 @@ char *cap_string(char *s)
 					break;
 				}
 				else
-					continue;
+					break;
 			}
 		}
 		i++;
