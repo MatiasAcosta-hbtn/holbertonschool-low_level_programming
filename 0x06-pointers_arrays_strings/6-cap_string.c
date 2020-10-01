@@ -10,6 +10,7 @@ char *cap_string(char *s)
 {
 	int i = 0, j = 0;
 	int puntos [] = {44, 59, 46, 9, 10, 32, 33, 63, 34, 40, 41, 123, 125};
+
 	while (*(s + i) != 0)
 	{
 		for (j = 0; j <= 12; j++)
