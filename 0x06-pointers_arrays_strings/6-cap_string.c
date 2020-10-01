@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * cap_string - capitalize an string
  * @s: the string received
@@ -10,7 +9,7 @@
 char *cap_string(char *s)
 {
 	int i = 0, j = 0;
-	int puntos[] = {33, 46, 59, 63, 123, 125, 40, 41, 44, 34, 10, 32, 11};
+	int puntos[] = {33, 46, 59, 63, 123, 125, 40, 41, 44, 34, 10, 32, 9};
 
 	while (*(s + i) != 0)
 	{
