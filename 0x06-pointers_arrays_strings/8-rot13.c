@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * leet - changes the letter
+ * rot13 - changes the letter
  * @s: the string to change
  * Return: a char pointer
  */
