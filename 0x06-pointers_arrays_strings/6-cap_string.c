@@ -13,6 +13,8 @@ char *cap_string(char *s)
 
 	while (*(s + i) != 0)
 	{
+		if (s[0] >= 97 && s[0] <=122)
+			s[0] -=32;
 		for (j = 0; j <= 12; j++)
 		{
 			if (*(s + i) == puntos[j])
