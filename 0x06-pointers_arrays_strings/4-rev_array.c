@@ -15,13 +15,13 @@ void reverse_array(int *a, int n)
 	{
 		tfin = *(a + i);
 		tin = *(a + j);
-		if (j >= i)
-			break;
-		if
+		if (j < i)
 		{
 			*(a + i) = tin;
 			*(a + j) = tfin;
 		}
+		else
+			break;
 		j++;
 	}
 }
