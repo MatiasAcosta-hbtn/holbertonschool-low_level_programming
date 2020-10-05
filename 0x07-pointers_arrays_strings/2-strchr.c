@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _strchr - search a char in an string
  * @s: String
@@ -7,6 +6,8 @@
  *
  * Return: the pointer to char or 0 if dont have coincidence
  */
+
+#define NULL ((void *)0)
 
 char *_strchr(char *s, char c)
 {
@@ -24,5 +25,5 @@ char *_strchr(char *s, char c)
 	if (flag != 0)
 		return (s);
 	else
-		return NULL;
+		return (NULL);
 }
