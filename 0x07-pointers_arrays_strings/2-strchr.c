@@ -6,21 +6,14 @@
  * Return: the pointer to char or 0 if dont have coincidence
  */
 
-
 char *_strchr(char *s, char c)
 {
-	int flag = 0;
+	int index;
 
-	while (*s != 0)
+	for (index = 0; s[index] != '\0'; index++)
 	{
-		if (*s == c)
-		{
-			flag = 1;
-			break;
-		}
-		s++;
+		if (s[index] == c)
+			return (s + index);
 	}
-	if (flag != 0)
-		return (s);
 	return ('\0');
 }
