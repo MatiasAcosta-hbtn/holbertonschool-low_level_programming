@@ -1,10 +1,8 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _strchr - search a char in an string
  * @s: String
  * @c: char to find
- *
  * Return: the pointer to char or 0 if dont have coincidence
  */
 
