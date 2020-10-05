@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * _strstr - return the coincidence with the other word
  * @haystack: String
@@ -9,9 +10,9 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0, j = 0;
+	 int i = 0, j = 0;
 
-	while (*haystack)
+	while (*haystack != 0 && *haystack)
 	{
 		if (haystack[i] == needle[0])
 		{
@@ -20,10 +21,10 @@ char *_strstr(char *haystack, char *needle)
 				if (*(haystack + i + j) != *(needle + j))
 					break;
 			}
-		if (*(needle + j + 1) == '\0')
+		if (*(needle + j) == '\0')
 			return (haystack);
 		}
 		haystack++;
 	}
-	return (0);
+	return ('\0');
 }
