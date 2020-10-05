@@ -1,15 +1,14 @@
 #include "holberton.h"
 /**
- * _strspn - return the initial segment of bytes that contain accept
+ * _strpbrk - return the segment when encuentra one coincidence
  * @s: String
  * @accept: chars to accept
  *
- * Return: the sum of bytes
+ * Return: the pointer to segment
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	unsigned int cont = 0;
 	int i, flag = 0;
 
 	while (*s != 0)
@@ -23,13 +22,12 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (flag != 0)
+		if (flag == 0)
 		{
-			cont++;
 			s++;
 		}
 		else
-			break;
+			return (s);
 	}
-	return (cont);
+	return (0);
 }

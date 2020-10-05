@@ -7,9 +7,8 @@
  * Return: the sum of bytes
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	unsigned int cont = 0;
 	int i, flag = 0;
 
 	while (*s != 0)
@@ -23,13 +22,12 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if (flag != 0)
+		if (flag == 0)
 		{
-			cont++;
 			s++;
 		}
 		else
 			break;
 	}
-	return (cont);
+	return (s);
 }
