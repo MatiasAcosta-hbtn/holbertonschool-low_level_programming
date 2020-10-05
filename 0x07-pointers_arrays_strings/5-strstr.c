@@ -1,33 +1,29 @@
 #include "holberton.h"
 /**
- * _strspn - return the initial segment of bytes that contain accept
- * @s: String
- * @accept: chars to accept
+ * _strstr - return the coincidence with the other word
+ * @haystack: String
+ * @needle: word to find
  *
- * Return: the sum of bytes
+ * Return: the pointer to hay or null
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, flag = 0;
+	int i = 0, j = 0;
 
-	while (*s != 0)
+	while (*(haystack + i) != 0)
 	{
-		flag = 0;
-		for (i = 0; *(accept + i) != 0; i++)
+		if (haystack[i] == needle[0])
 		{
-			if (*s == *(accept + i))
+			for (j = 0; *(haystack + j) != '\0' && *(haystack + i +j) != '\0'; j++)
 			{
-				flag = 1;
-				break;
+				if (*(haystack + i + j) != *(needle + j))
+					break;
 			}
+		if (*(needle + j + 1) == '\0')
+			return (haystack + i);
 		}
-		if (flag == 0)
-		{
-			s++;
-		}
-		else
-			break;
+		i++;
 	}
-	return (s);
+	return (0);
 }
