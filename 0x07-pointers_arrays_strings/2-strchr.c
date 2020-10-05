@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * _strchr - search a char in an string
  * @s: String
@@ -11,7 +11,6 @@
 char *_strchr(char *s, char c)
 {
 	int flag = 0;
-	char *n = NULL;
 
 	while (*s != 0)
 	{
@@ -25,5 +24,5 @@ char *_strchr(char *s, char c)
 	if (flag != 0)
 		return (s);
 	else
-		return (NULL);
+		return NULL;
 }
