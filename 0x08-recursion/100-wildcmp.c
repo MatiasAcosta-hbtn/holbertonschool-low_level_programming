@@ -21,12 +21,14 @@ int wildcmp(char *s1, char *s2)
 		return (wildcmp(s1 + 1, s2 + 1));
 	return (0);
 }
+
 /**
  *aux2 - auxiliary function
  *@s1: pointer of string 1
  *@s2: pointer of string 2
  *Return: pointer
  */
+
 int aux2(char *s1, char *s2)
 {
 	if (*s1 == *s2)
