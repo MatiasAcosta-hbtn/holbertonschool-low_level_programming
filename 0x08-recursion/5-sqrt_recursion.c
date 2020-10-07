@@ -5,7 +5,7 @@
  * @n: a number
  * @b: an other number
  * Return: t
- */ 
+ */
 int aux(int n, int b)
 {
 	if (b * b == n)
