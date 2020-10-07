@@ -7,14 +7,10 @@
 
 void _print_rev_recursion(char *s)
 {
-	int tope, i;
-	while(*(s + tope) <= 0)
-		tope++;
+	if(*s != 0)
+	{
+		_print_rev_recursion(s + 1);
+		_putchar(*s);
+	}
 
-	if(*(s + tope) == 0)
-		{
-		_putchar(*(s + tope));
-		tope--;
-		_print_rev_recursion(s);
-		}
 }

@@ -1,15 +1,20 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
- * factorial - return the factorial of a num
- * @n: the num
- * Return: the sum factorial of num
+ * _pow_recursion - a pow function with recursion
+ * @x: the number
+ * @y: the exponent
+ * Return: the pow of a number
  */
 
 int _pow_recursion(int x, int y)
 {
-	
-	if (y < 0)
+	int res = 0;
+
+	if (y == 0)
+		return (1);
+	else if (y < 0)
 		return (-1);
-	
+	else
+		return (x * _pow_recursion(x, y - 1));
 }
