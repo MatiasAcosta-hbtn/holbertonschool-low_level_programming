@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - Entry 
- * Return - always 0
+ * main - Entry
+ * @argc: count of arguments
+ * @argv: arguments passed
+ * Return: always 0
  */
 int main(int argc, char *argv[])
 {
@@ -16,10 +18,10 @@ int main(int argc, char *argv[])
 	for (i = 1; argv[i] != '\0'; i++)
 	{
 		test = atoi(argv[i]);
-		if(test == 0 && *argv[i] != 48)
+		if (test == 0 && *argv[i] != 48)
 		{
 			printf("Error\n");
-			return (1);	
+			return (1);
 		}
 		else
 			res += test;

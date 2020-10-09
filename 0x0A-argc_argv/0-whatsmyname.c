@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Entry 
- * Return - always 0
+ * main - Entry
+ * @argc: count of args
+ * @argv: arguments passed
+ * Return: always 0
  */
 int main(int argc, char *argv[])
 {
