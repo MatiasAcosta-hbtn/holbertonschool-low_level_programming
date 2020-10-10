@@ -47,7 +47,7 @@ return (monedas);
  */
 int main(int argc, char *argv[])
 {
-	int i = 0, total = 0, monedas = 0;
+	unsigned int i = 0, total = 0, monedas = 0;
 
 	if (argc != 2)
 	{
