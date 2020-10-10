@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * contar_monedas - count the cantidad of monedas dependig of the total
- * @total: the total
- * Return: the count of monedas
- */
-
 long int contar_monedas(long int total);
 
 /**
@@ -19,6 +13,7 @@ int main(int argc, char *argv[])
 {
 	int i = 0;
 	long int total = 0, monedas = 0;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -51,32 +46,32 @@ int main(int argc, char *argv[])
 
 long int contar_monedas(long int total)
 {
-        long int monedas = 0;
+	long int monedas = 0;
 
-        while (total >= 25)
-        {
-                total -= 25;
-                monedas++;
-        }
-        while (total >= 10)
-        {
-                total -= 10;
-                monedas++;
-        }
-        while (total >= 5)
-        {
-                total -= 5;
-                monedas++;
-        }
-        while (total >= 2)
-        {
-                total = total - 2;
-                monedas++;
-        }
-        while (total >= 1)
-        {
-                total -= 1;
-                monedas++;
-        }
-return (monedas);
+	while (total >= 25)
+	{
+		total -= 25;
+		monedas++;
+	}
+	while (total >= 10)
+	{
+		total -= 10;
+		monedas++;
+	}
+	while (total >= 5)
+	{
+		total -= 5;
+		monedas++;
+	}
+	while (total >= 2)
+	{
+		total = total - 2;
+		monedas++;
+	}
+	if (total == 1)
+	{
+		total -= 1;
+		monedas++;
+	}
+	return (monedas);
 }
