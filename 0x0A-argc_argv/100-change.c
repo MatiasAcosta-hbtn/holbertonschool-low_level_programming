@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-long int contar_monedas(long int total);
-
 /**
  * main - Entry
  * @argc: count of arguments
@@ -11,67 +9,45 @@ long int contar_monedas(long int total);
  */
 int main(int argc, char *argv[])
 {
-	int i = 0;
-	long int total = 0, monedas = 0;
+	int total = 0, monedas = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	for (i = 0; argv[1][i] != 0; i++)
-	{
-		if (argv[1][i] < 48 || argv[1][i] > 57)
-		{
-			printf("Error\n");
-			return (1);
-		}
-	}
 	total = atoi(argv[1]);
+
 	if (total < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
-	monedas = contar_monedas(total);
-	printf("%li\n", monedas);
-	return (0);
-}
-
-/**
- * contar_monedas - count the cantidad of monedas dependig of the total
- * @total: the total
- * Return: the count of monedas
- */
-
-long int contar_monedas(long int total)
-{
-	long int monedas = 0;
-
-	while (total >= 25)
+	while (total > 0)
+	{
+	monedas++;
+	if (total >= 25)
 	{
 		total -= 25;
-		monedas++;
+		continue;
 	}
-	while (total >= 10)
+	if (total >= 10)
 	{
 		total -= 10;
-		monedas++;
+		continue;
 	}
-	while (total >= 5)
+	if (total >= 5)
 	{
-		total -= 5;
-		monedas++;
+		total -=5;
+		continue;
 	}
-	while (total >= 2)
+	if (total >=2)
 	{
-		total = total - 2;
-		monedas++;
+		total -=2;
+		continue;
 	}
-	if (total == 1)
-	{
-		total -= 1;
-		monedas++;
+	total--;	
 	}
-	return (monedas);
+	printf("%d\n", monedas);
+	return (0);
 }
