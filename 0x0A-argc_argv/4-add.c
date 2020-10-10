@@ -25,9 +25,8 @@ int main(int argc, char *argv[])
 				printf("Error\n");
 				return (1);
 			}
-		else
-			res += atoi(argv[i]);
 		}
+		res += atoi(argv[i]);
 	}
 	printf("%i\n", res);
 	return (0);
