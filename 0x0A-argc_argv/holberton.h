@@ -1,1 +1,1 @@
-int contar_monedas(int total);
+long int contar_monedas(long int total);

@@ -7,7 +7,7 @@
  * Return: the count of monedas
  */
 
-unsigned int contar_monedas(unsigned int total);
+long int contar_monedas(long int total);
 
 /**
  * main - Entry
@@ -18,7 +18,7 @@ unsigned int contar_monedas(unsigned int total);
 int main(int argc, char *argv[])
 {
 	int i = 0;
-	unsigned int total = 0, monedas = 0;
+	long int total = 0, monedas = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 	monedas = contar_monedas(total);
-	printf("%d\n", monedas);
+	printf("%li\n", monedas);
 	return (0);
 }
 
@@ -49,9 +49,9 @@ int main(int argc, char *argv[])
  * Return: the count of monedas
  */
 
-unsigned int contar_monedas(unsigned int total)
+long int contar_monedas(long int total)
 {
-        unsigned int monedas = 0;
+        long int monedas = 0;
 
         while (total >= 25)
         {
