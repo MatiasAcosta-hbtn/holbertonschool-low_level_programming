@@ -11,22 +11,22 @@ int contar_monedas(int total)
 {
 	int monedas = 0;
 
-	while (total > 25)
+	while (total >= 25)
 	{
 		total -= 25;
 		monedas++;
 	}
-	while (total > 10)
+	while (total >= 10)
 	{
 		total -= 10;
 		monedas++;
 	}
-	while (total > 5)
+	while (total >= 5)
 	{
 		total -= 5;
 		monedas++;
 	}
-	while (total > 2)
+	while (total >= 2)
 	{
 		total = total - 2;
 		monedas++;
