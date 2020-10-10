@@ -7,7 +7,7 @@
  * Return: the count of monedas
  */
 
-int contar_monedas(int total);
+int contar_monedas(unsigned int total);
 
 /**
  * main - Entry
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
  * Return: the count of monedas
  */
 
-int contar_monedas(int total)
+int contar_monedas(unsigned int total)
 {
         int monedas = 0;
 
