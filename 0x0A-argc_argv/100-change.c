@@ -17,8 +17,8 @@ int contar_monedas(int total);
  */
 int main(int argc, char *argv[])
 {
-	int i = 0, total = 0, monedas = 0;
-
+	int i = 0, monedas = 0;
+	unsigned int total = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
