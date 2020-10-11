@@ -17,11 +17,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	total = atoi(argv[1]);
-	if(total == 0 && argv[1][0] != 0)
-	{
-		printf("Error\n");
-		return (1);
-	}
 	if (total <= 0)
 	{
 		printf("0\n");
