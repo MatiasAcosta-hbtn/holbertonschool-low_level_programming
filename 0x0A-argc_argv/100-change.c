@@ -7,9 +7,6 @@
  * Return: always 0
  */
 
-
-int contar_monedas(int total);
-
 int main(int argc, char *argv[])
 {
 	int total = 0, monedas = 0;
@@ -25,21 +22,13 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return(0);
 	}
-	monedas = contar_monedas(total);
-	printf("%d\n", monedas);
-}
-
-int contar_monedas(int total)
-{
-	int monedas = 0;
-
 	while (total > 0)
 	{
 		monedas++;
-		if (total >= 25)
+		if(total >= 25)
 		{
 			total -= 25;
-			continue;	
+			continue;
 		}
 		if (total >= 10)
 		{
@@ -53,11 +42,11 @@ int contar_monedas(int total)
 		}
 		if (total >= 2)
 		{
-			total -= 2;
+			total -=2;
 			continue;
 		}
-		if (total == 1)
-			total--;
+		total--;
 	}
-	return (monedas);
+	printf("%d\n", monedas);
 }
+
