@@ -1,5 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * main - Entry
+ * @argc: count of arguments
+ * @argv: arguments passed
+ * Return: always 0
+ */
+
+
+int contar_monedas(int total);
+
+int main(int argc, char *argv[])
+{
+	int total = 0, monedas = 0;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	total = atoi(argv[1]);
+	if (total <= 0)
+	{
+		printf("0\n");
+		return(0);
+	}
+	monedas = contar_monedas(total);
+	printf("%d\n", monedas);
+}
 
 int contar_monedas(int total)
 {
@@ -32,29 +60,4 @@ int contar_monedas(int total)
 			total--;
 	}
 	return (monedas);
-}
-
-/**
- * main - Entry
- * @argc: count of arguments
- * @argv: arguments passed
- * Return: always 0
- */
-int main(int argc, char *argv[])
-{
-	int total = 0, monedas = 0;
-
-	if (argc != 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	total = atoi(argv[1]);
-	if (total <= 0)
-	{
-		printf("0\n");
-		return(0);
-	}
-	monedas = contar_monedas(total);
-	printf("%d\n", monedas);
 }
