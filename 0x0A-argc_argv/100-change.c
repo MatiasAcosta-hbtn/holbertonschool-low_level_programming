@@ -17,30 +17,38 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	total = atoi(argv[1]);
-	while (total > 0)
+	if(total == 0 && argv[1][0] != 0)
 	{
-		monedas++;
-		if(total >= 25)
-		{
-			total -= 25;
-			continue;
-		}
-		if (total >= 10)
-		{
-			total -= 10;
-			continue;
-		}
-		if (total >= 5)
-		{
-			total -= 5;
-			continue;
-		}
-		if (total >= 2)
-		{
-			total -=2;
-			continue;
-		}
-		total--;
+		printf("Error\n");
+		return (1);
 	}
+	if (total <= 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	while (total >= 25)
+	{
+		total -= 25;
+		monedas++;
+	}
+	while (total >= 10)
+	{
+		total -= 10;
+		monedas++;
+	}
+	while (total >= 5)
+	{
+		total -=5;
+		monedas++;
+	}
+	while (total >= 2)
+	{
+		total -= 2;
+		monedas++;
+	}
+	if(total == 1)
+		monedas++;
 	printf("%d\n", monedas);
+	return (0);
 }
