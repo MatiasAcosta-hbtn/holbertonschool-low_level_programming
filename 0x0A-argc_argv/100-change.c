@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	}
 	while (total >= 5)
 	{
-		total -=5;
+		total -= 5;
 		monedas++;
 	}
 	while (total >= 2)
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 		total -= 2;
 		monedas++;
 	}
-	if(total == 1)
+	if (total == 1)
 		monedas++;
 	printf("%d\n", monedas);
 	return (0);
