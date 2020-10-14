@@ -1,25 +1,26 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * alloc_grid -
- * @width:
- * @height:
- * Return:
+ * alloc_grid - return a 2 dimension array with all 0
+ * @width: width of matrix
+ * @height: height of matrix
+ * Return: the 2 dimension array
  */
 
 int **alloc_grid(int width, int height)
 {
 	int **grid;
 	int i = 0, j = 0;
+
 	if (width <= 0 || height <= 0)
-		return(NULL);
+		return (NULL);
 	grid = (int **)malloc(height * sizeof(int *));
 	if (grid == NULL)
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
 		grid[i] = (int *)malloc(sizeof(int) * width);
-		if(grid[i] == NULL)
+		if (grid[i] == NULL)
 		{
 			for (i = i - 1; i >= 0; i--)
 			{
@@ -29,11 +30,9 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
-	for(i = 0; i < width; i++)
+	for (i = 0; j < width; j++)
 	{
-		for(j = 0; j < height; j ++)
-			grid[i][j] = 0;
-
+		grid[i][j] = 0;
 	}
-	return(grid);
+	return (grid);
 }
