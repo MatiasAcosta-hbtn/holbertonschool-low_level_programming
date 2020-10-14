@@ -21,25 +21,22 @@ char *argstostr(int ac, char **av)
 
 		for(j = 0; av[i][j] != 0; j++)
 		{
-			printf("%c",av[i][j]);
+			total++;
 		}
-		printf("\n");
-		total += j + 1;
 	}
-	p = (char *)malloc(sizeof(char) * total);
+	p = (char *)malloc(sizeof(char) * total + 1);
 	if (p == NULL)
 		return (NULL);
-	printf("\n\n");
-	printf("total de p deberia ser: %d", total);
 	for (i = 0; i < ac; i++)
 	{
-		for(j = 0; av[i][j] != '\0'; j++)
+		for(j = 0; av[i][j] != 0; j++)
 		{
 			p[aux] = av[i][j];
 			aux++;
-			printf("%c",p[aux]);
 		}
-		printf("\n");		
+			p[aux] = '\n';
+			aux++;		
 	}
+	p[total] = '\0';
 	return(p);
 }
