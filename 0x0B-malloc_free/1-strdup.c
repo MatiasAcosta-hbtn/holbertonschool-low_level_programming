@@ -6,13 +6,12 @@
  *  @str: the source to copy
  * Return: the array
  */
-
 char *_strdup(char *str)
 {
 	int cont = 0, i = 0;
 	char *c;
 
-	if(str == NULL)
+	if (str == NULL)
 		return (NULL);
 	while (*(str + cont) != 0)
 		cont++;
@@ -23,6 +22,5 @@ char *_strdup(char *str)
 	{
 		c[i] = str[i];
 	}
-	c[i + 1] = '\0';
 	return (c);
 }
