@@ -13,25 +13,33 @@ char *argstostr(int ac, char **av)
 	char *p;
 	int i = 0, j = 0, aux = 0, total = 0;
 
-if (ac == 0 || av == NULL)
-	return (NULL);
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
-for (i = 0; i < ac; i++)
-{
-	for(j = 0; av[j] != 0; j++)
+	for(i = 0; i < ac; i++)
 	{
+
+		for(j = 0; av[i][j] != 0; j++)
+		{
+			printf("%c",av[i][j]);
+		}
+		printf("\n");
+		total += j + 1;
 	}
-	total += j + 1;
-}
-printf("%d\n", total);
-p = (char *)malloc(sizeof(char) * total);
-for (i = 0; i < ac; i++)
-{
-	for(j = 0; av[j] != 0; j++)
+	p = (char *)malloc(sizeof(char) * total);
+	if (p == NULL)
+		return (NULL);
+	printf("\n\n");
+	printf("total de p deberia ser: %d", total);
+	for (i = 0; i < ac; i++)
 	{
-		p[aux] = av[i][j];
-		aux++;
+		for(j = 0; av[i][j] != '\0'; j++)
+		{
+			p[aux] = av[i][j];
+			aux++;
+			printf("%c",p[aux]);
+		}
+		printf("\n");		
 	}
-}
-return (p);
+	return(p);
 }
