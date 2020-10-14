@@ -17,6 +17,6 @@ int main(int ac, char *av[])
         return (1);
     }
     printf("%s", s);
-    free(s);
+	free(s);
     return (0);
 }
