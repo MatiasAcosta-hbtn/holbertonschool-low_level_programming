@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strdup -
- *  @str:
- * Return:
+ * _strdup - create an array and copy from str
+ *  @str: the source to copy
+ * Return: the array
  */
 
 char *_strdup(char *str)
@@ -16,7 +16,9 @@ char *_strdup(char *str)
 		cont++;
 	if (cont == 0)
 		return (NULL);
-	c = malloc(sizeof(char) * cont);
+	c = (char *) malloc(sizeof(char) * cont);
+	if (c == NULL)
+		return (NULL);
 	for (i = 0; i < cont; i++)
 	{
 		c[i] = str[i];
