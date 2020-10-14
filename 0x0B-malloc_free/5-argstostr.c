@@ -37,6 +37,5 @@ char *argstostr(int ac, char **av)
 			p[aux] = '\n';
 			aux++;		
 	}
-	p[total] = '\0';
 	return(p);
 }
