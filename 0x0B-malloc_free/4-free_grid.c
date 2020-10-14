@@ -1,9 +1,9 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * free_grid -
- * @grid:
- * @height:
+ * free_grid - clean a grid
+ * @grid: the grid
+ * @height: the height of the grid
  */
 
 void free_grid(int **grid, int height)
