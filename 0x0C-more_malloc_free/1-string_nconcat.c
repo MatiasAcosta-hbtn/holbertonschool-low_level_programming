@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int _strlen(char *s);
+
 /**
  * string_nconcat - concatenated 2 string but n bytes of s2
  * @s1: string 1
@@ -9,7 +11,6 @@
  * @n: count of bytes of s2
  * Return: the concatenated strings
  */
-
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -20,11 +21,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	while (*(s1 + cont_s1))
-		cont_s1++;
-	while (*(s2 + cont_s2))
-		cont_s2++;
-	if (n >= cont_s2)
+	cont_s1 = _strlen(s1);
+	cont_s2 = _strlen(s2);
+	if (n > cont_s2)
 		n = cont_s2;
 	p = (char *)malloc(sizeof(char) * (cont_s1 + n) + 1);
 	if (p == NULL)
@@ -39,4 +38,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	p[i + j + 1] = '\0';
 	return (p);
+}
+
+int _strlen(char *s)
+{
+
+int i = 0;
+
+while (*(s + i) != 0)
+	i++;
+return (i);
 }
