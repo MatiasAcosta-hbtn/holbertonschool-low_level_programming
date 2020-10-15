@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	long int num1, num2, mul;
+	long long unsigned int num1, num2, mul;
 
 	if (argc != 3)
 	{
@@ -30,6 +30,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	mul = num1 * num2;
-	printf("%ld\n", mul);
+	printf("%llu\n", mul);
 	return (0);
 }
