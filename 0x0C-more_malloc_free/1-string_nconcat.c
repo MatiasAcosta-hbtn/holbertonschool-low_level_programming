@@ -14,7 +14,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
 	unsigned int i = 0, j = 0, cont_s1 = 0, cont_s2 = 0;
-
+	
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	while (*(s1 + cont_s1) != 0)
 		cont_s1++;
 	while (*(s2 + cont_s2) != 0)
@@ -22,6 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= cont_s2)
 		n = cont_s2;
 	p = (char *)malloc(sizeof(char) * (cont_s1 + n) + 1);
+	printf("TOTAL:%d\n",(cont_s1 + n +1));
 	if (p == NULL)
 		return (NULL);
 	for (i = 0; i < cont_s1; i++)
