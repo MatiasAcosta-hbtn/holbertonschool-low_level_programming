@@ -9,27 +9,21 @@
  * @n: count of bytes of s2
  * Return: the concatenated strings
  */
-int _strlen(char *s)
-{
 
-int i = 0;
-
-while (*(s + i) != 0)
-	i++;
-return (i);
-}
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
 	unsigned int i = 0, j = 0, cont_s1 = 0, cont_s2 = 0;
-	
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	cont_s1 = _strlen(s1);
-	cont_s2 = _strlen(s2);
+	while (*(s1 + cont_s1))
+		cont_s1++;
+	while (*(s2 + cont_s2))
+		cont_s2++;
 	if (n >= cont_s2)
 		n = cont_s2;
 	p = (char *)malloc(sizeof(char) * (cont_s1 + n) + 1);
@@ -41,8 +35,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (j = 0; j < n; j++)
 	{
-		p[j + i] = s2[j];
+		p[i + j] = s2[j];
 	}
-	p[j + i + 1] = '\0';
+	p[i + j + 1] = '\0';
 	return (p);
 }
