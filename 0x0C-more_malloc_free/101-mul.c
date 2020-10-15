@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit (98);
 	}
-	mul = num1 + num2;
-	printf("%ld", mul);
+	mul = num1 * num2;
+	printf("%ld\n", mul);
 	return(0);
 }
