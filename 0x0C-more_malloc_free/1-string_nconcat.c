@@ -39,10 +39,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		p[i] = s1[i];
 	}
-	for (j = i; j < cont_s2 + i; j++)
+	for (j = 0; j < n; j++)
 	{
-		p[j] = s2[j - i];
+		p[j + i] = s2[j];
 	}
-	p[j + 1] = '\0';
+	p[j + i + 1] = '\0';
 	return (p);
 }
