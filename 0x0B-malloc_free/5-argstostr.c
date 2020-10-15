@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * argstostr -
- * @ac:
- * @av:
- * Return:
+ * argstostr - return a char with all the values of passed in main
+ * @ac: count of ac
+ * @av: array of char
+ * Return: the pointer
  */
 
 char *argstostr(int ac, char **av)
@@ -16,10 +16,10 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for(i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 
-		for(j = 0; av[i][j] != 0; j++)
+		for (j = 0; av[i][j] != 0; j++)
 		{
 			total++;
 		}
@@ -30,13 +30,13 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		for(j = 0; av[i][j] != 0; j++)
+		for (j = 0; av[i][j] != 0; j++)
 		{
 			p[aux] = av[i][j];
 			aux++;
 		}
 			p[aux] = '\n';
-			aux++;		
+			aux++;
 	}
-	return(p);
+	return (p);
 }
