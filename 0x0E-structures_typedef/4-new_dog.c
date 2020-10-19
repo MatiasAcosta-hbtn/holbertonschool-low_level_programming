@@ -4,28 +4,36 @@
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 
+/**
+ * new_dog - return a new dog with the same name and owner
+ * @name: the name of dog
+ * @age: the age of the dog
+ * @owner: the owner of the dog
+ * Return: the new dog
+ */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *my_dog;
 	int size_n, size_own;
-	
+
 	size_n = _strlen(name);
 	size_own = _strlen(owner);
 	my_dog = malloc(sizeof(dog_t));
-	if(my_dog == NULL)
+	if (my_dog == NULL)
 		return (NULL);
 	my_dog->name = malloc((size_n * sizeof(char) + 1));
 	if (my_dog->name == NULL)
 	{
 		free(my_dog);
-		return(NULL);
+		return (NULL);
 	}
 	my_dog->owner = malloc((size_own * sizeof(char) + 1));
 	if (my_dog->owner == NULL)
 	{
 		free(my_dog->name);
 		free(my_dog);
-		return(NULL);
+		return (NULL);
 	}
 	my_dog->name = _strcpy(my_dog->name, name);
 	my_dog->age = age;
