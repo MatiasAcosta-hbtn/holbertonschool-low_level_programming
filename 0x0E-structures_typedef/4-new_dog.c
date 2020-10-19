@@ -6,7 +6,6 @@ char *_strcpy(char *dest, char *src);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	(void)age;
 	dog_t *my_dog;
 	int size_n, size_own;
 	
