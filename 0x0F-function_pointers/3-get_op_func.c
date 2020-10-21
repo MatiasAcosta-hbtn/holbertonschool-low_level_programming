@@ -1,6 +1,6 @@
 #include "3-calc.h"
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 
 int (*get_op_func(char *s))(int, int)
 {
@@ -12,13 +12,14 @@ int (*get_op_func(char *s))(int, int)
 	{"%", op_mod},
 	{NULL, NULL}
 	};
-	int i;
-
+	int i = 0;
+		
 	while (ops[i].op)
 	{
-		if (strcmp(ops[i].op, s))
+		if (ops[i].op[0] == s[0] && s[1] == '\0')
 			return(ops[i].f);
 		i++;
 	}
-	return(NULL);
+	printf("Error\n");
+	exit(99);
 }
