@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * main - entry point
  * @argc: amount of parameters
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
-	if (atoi(argv[1] < 0))
+	if (atoi(argv[1]) < 0)
 	{
 		printf("Error\n");
 		exit(2);
