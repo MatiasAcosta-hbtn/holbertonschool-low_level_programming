@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - entry point
+ * @argc - cantidad de elem
+ * @argv - elements
+ * Return: always 0
+ */
+
 int main(int argc, char *argv[])
 {
 	if (argc != 4)
