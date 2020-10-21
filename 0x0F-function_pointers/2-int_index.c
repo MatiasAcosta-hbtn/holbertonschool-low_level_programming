@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdlib.h>
 
 /**
  * int_index - the function that print the index of the array if found 98
@@ -13,6 +14,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 	int i = 0, comp = 0;
 
 	if (size <= 0)
+		return (-1);
+	if (array == NULL)
+		return (-1);
+	if (cmp == NULL)
 		return (-1);
 	for (i = 0; i < size; i++)
 	{
