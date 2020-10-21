@@ -4,8 +4,8 @@
 
 /**
  * main - entry point
- * @argc - cantidad de elem
- * @argv - elements
+ * @argc: cantidad de elem
+ * @argv: elements
  * Return: always 0
  */
 
