@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#include <stdlib.h>
 
 /**
  * print_name - function thar print the name passed in parameters
@@ -9,7 +8,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == NULL)
+	if (name == 0)
 		return;
 	if (name[0] == 0)
 		return;
