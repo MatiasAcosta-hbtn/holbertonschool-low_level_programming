@@ -18,7 +18,7 @@ void print_all(const char * const format, ...);
 
 typedef struct op
 {
-	char c;
+	char *c;
 	void (*func)();
 } op_t;
 #endif
