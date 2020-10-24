@@ -1,5 +1,11 @@
 #include "variadic_functions.h"
 
+/**
+ * sum_them_all - function that sum all
+ * @n: count of elements
+ * Return: the sum
+ */
+
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list args;
