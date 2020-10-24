@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(args, format);
-	while (format[i] != 0 && !format)
+	while (format[i] != 0 && format != NULL)
 	{
 		while (options[j].c != NULL)
 		{
@@ -78,6 +78,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-		va_end(args);
+	va_end(args);
 }
-
