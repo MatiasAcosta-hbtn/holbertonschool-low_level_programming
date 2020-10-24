@@ -8,8 +8,17 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-typedef struct op{
+
+/**
+ * struct op - Short description
+ * @c: First member
+ * @func: Second member
+ * Description: Longer description
+ */
+
+typedef struct op
+{
 	char c;
 	void (*func)();
-}op_t;
+} op_t;
 #endif
