@@ -9,7 +9,7 @@ void print_char(char *str, va_list args)
 	printf("%s%c", str, va_arg(args, int));
 }
 /**
- * print_int - print int
+ * print_integer - print int
  * @str: string pointer
  * @args: argumentList
  */
@@ -58,15 +58,15 @@ void print_all(const char * const format, ...)
 	{"i", print_integer},
 	{"f", print_float},
 	{"s", print_string},
-	{NULL,NULL}
+	{NULL, NULL}
 	};
-	
+
 	va_start(args, format);
-	while(format[i] != 0 && !format)
+	while (format[i] != 0 && !format)
 	{
-		while(options[j].c != NULL)
+		while (options[j].c != NULL)
 		{
-			if(format[i] == options[j].c[0])
+			if (format[i] == options[j].c[0])
 			{
 				options[j].func(s, args);
 				s = ", ";
