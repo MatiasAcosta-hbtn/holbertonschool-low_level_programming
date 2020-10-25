@@ -2,7 +2,7 @@
 
 /**
  * print_int - function to print ints
- * @arg: va_list type
+ * @args: va_list type
  * Return: always successful
  */
 void print_int(va_list args)
@@ -12,7 +12,7 @@ void print_int(va_list args)
 
 /**
  * print_char - function to print char
- * @arg: va_list type
+ * @args: va_list type
  * Return: always successful
  */
 
@@ -22,7 +22,7 @@ void print_char(va_list args)
 }
 /**
  * print_float - function to print floats
- * @arg: va_list type
+ * @args: va_list type
  * Return: always successful
  */
 void print_float(va_list args)
@@ -32,7 +32,7 @@ void print_float(va_list args)
 
 /**
  * print_string - function to print string
- * @arg: va_list type
+ * @args: va_list type
  * Return: always successful
  */
 void print_string(va_list args)
