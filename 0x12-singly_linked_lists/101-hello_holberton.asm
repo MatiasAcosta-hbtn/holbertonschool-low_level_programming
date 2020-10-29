@@ -1,4 +1,4 @@
-	define sys_write 1
+%define sys_write 1
 %define stdout 1
 %define sys_exit 60
 %define success 0
