@@ -1,27 +1,31 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - get a node with the index
+ * insert_nodeint_at_index - get a node with the index
  * @head: the head of the list
- * @index: the index
+ * @idx: the index
+ * @n: the data of the node
  * Return: the node in the index
  */
 
-int delete_nodeint_at_index(listint_t **head, unsigned int index)
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *aux;
+	listint_t *aux, *deleted;
 	unsigned int pos = 0;
 
 	if (!head)
-		return (NULL);
-	aux = head;
-	while (aux && pos < index)
+	{
+		return (new);
+	}
+	aux = *head;
+	while (aux && pos < idx)
 	{
 		aux = aux->next;
 		pos++;
 	}
-	if (pos != index)
+	if (pos != idx)
 		return (NULL);
-	else
-		return (aux);
+	new->next = aux->next;
+	aux->next = new;
+	return (new);
 }

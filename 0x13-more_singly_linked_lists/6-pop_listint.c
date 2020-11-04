@@ -14,10 +14,8 @@ int pop_listint(listint_t **head)
 	if (*head == NULL)
 		return (0);
 	deleted = *head;
-	if (deleted->next == NULL)
-		return (0);
-	n = deleted->next->n;
-	*head = deleted->next;
+	n = (*head)->n;
+	*head = (*head)->next;
 	free(deleted);
 	return (n);
 }
