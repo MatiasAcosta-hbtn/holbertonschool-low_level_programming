@@ -1,35 +1,37 @@
 #include "lists.h"
 
-listint_t *add_nodeint(listint_t *head, const int n, listint_t *point)
-{
-        listint_t *node;
-
-        if (!head)
-                return (NULL);
-        node = malloc(sizeof(listint_t));
-        if (node == NULL)
-                return (NULL);
-        node->next = point;
-        return (node);
-}
-~                         
+/**
+ * insert_nodeint_at_index - get a node with the index
+ * @head: the head of the list
+ * @idx: the index
+ * @n: the data of the node
+ * Return: the node in the index
+ */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int i;
-	listint_t *aux, *node;
+	listint_t *aux, *new;
+	unsigned int pos = 0;
 
-	aux = *head;
-	if(!*head)
+	new = malloc(sizeof(listint_t));
+	if (!new)
 		return (NULL);
-	for (i = 0; i < idx; i++)
+	new->n = n;
+	new->next = NULL;
+	if (!head)
 	{
-		if (!aux)
-			return (NULL);
-		aux = aux->next
+		*head = new;
+		return (new);
 	}
-	node = add_nodeint(aux, n, aux->next);
-	if (!node)
+	aux = *head;
+	while (aux && pos < idx)
+	{
+		aux = aux->next;
+		pos++;
+	}
+	if (pos != idx)
 		return (NULL);
-	return (node);
+	new->next = aux->next;
+	aux->next = new;
+	return (new);
 }
