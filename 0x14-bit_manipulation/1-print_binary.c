@@ -9,8 +9,6 @@
 
 void print_binary(unsigned long int n)
 {
-	int flag = 0;
-
 	if (n == 0)
 	{
 		printf("0");
