@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *get_bit - get bit by an index
+ *set_bit - get bit by an index
  *@n: number
  *@index: index
  *Return: 1, 0 or -1
