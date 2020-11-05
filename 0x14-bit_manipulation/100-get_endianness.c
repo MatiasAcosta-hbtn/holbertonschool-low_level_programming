@@ -6,11 +6,10 @@
 
 int get_endianness(void)
 {
-       union
-       {
-           int  i;
-           char b[sizeof(int)];
-       } u;
-       u.i = 0x01020304;
-       return (u.b[0] == 0x01) ? 0 : 1;
+	int num = 1;
+
+	if (*(char *)&num == 1)
+		return (1);
+	else
+		return (0);
 }
