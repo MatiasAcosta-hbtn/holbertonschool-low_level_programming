@@ -1,23 +1,19 @@
 #include "holberton.h"
 /**
- * get_bit - print a number in binary
- * @n: the number
- * @index: the index
- * Return: Num
+ *get_bit - get bit by an index
+ *@n: number
+ *@index: index
+ *Return: 1, 0 or -1
  */
-
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int m;
-	
-	if (index == 0 && n == 0)
-		return (0);
-	if (index == 0)
-		return (n & 1);
-	if (n == 0 && index != 0)
+	unsigned long int check =  1;
+
+	if (index > sizeof(n) * 8)
 		return (-1);
-	if (n == 0)
-		return (n & 1);
-	m = get_bit(n >> 1, index - 1);
-	return (m);
+	check <<= index;
+	if (check &  n)
+		return (1);
+	else
+		return (0);
 }
