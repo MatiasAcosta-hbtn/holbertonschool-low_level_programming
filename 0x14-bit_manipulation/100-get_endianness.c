@@ -6,8 +6,14 @@
 
 int get_endianness(void)
 {
-	if (*(char *)&num == 1)
-		return (1);
-	else
-		return (0);
+int endianness(void)
+{
+       union
+       {
+           int  i;
+           char b[sizeof(int)];
+       } u;
+       u.i = 0x01020304;
+       return (u.b[0] == 0x01) ? BigEndian : LittleEndian;
+}
 }
