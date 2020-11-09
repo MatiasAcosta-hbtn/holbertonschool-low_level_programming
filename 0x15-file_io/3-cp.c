@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	from = open(argv[1], O_RDONLY);
 	byte_r = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
-	while (byte_r > 0)
+	do
 	{
 		if (from == -1 || byte_r == -1)
 		{
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 		}
 		byte_r = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	}
+	} while (byte_r > 0);
 	free(buffer);
 	close_file(from);
 	close_file(to);
