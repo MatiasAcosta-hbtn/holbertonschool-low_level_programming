@@ -16,9 +16,14 @@ void close_file(int file)
 
 int main(int argc, char *argv[])
 {
-	int from, to, byte_r, byte_w, c_f, c_t;
+	int from, to, byte_r, byte_w;
 	char *buffer;
 
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 	{
