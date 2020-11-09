@@ -12,7 +12,7 @@ int create_file(const char *filename, char *text_content)
 			letters++;
 	}
 	file = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	bytes = write(file, text_content, letters + 1);
+	bytes = write(file, text_content, letters);
 	if(bytes == -1 || file == -1)
 		return (-1);
 	close(file);
