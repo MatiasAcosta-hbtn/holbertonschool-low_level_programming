@@ -1,22 +1,10 @@
 #include "lists.h"
 
-dlistint_t *create_dnode(int n)
-{
-	dlistint_t *new;
-
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->prev = NULL;
-	new->next = NULL;
-	return (new);
-}
-
 /**
- *
- *
- *
+ * add_dnodeint_end - add a node in the end of the list
+ * @head: the head of the list
+ * @n: data of list
+ * Return: the address of the new node
  */
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
@@ -24,16 +12,20 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	dlistint_t *aux, *new;
 
 	aux = *head;
-	new = create_dnode(n);
+	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
-	if (aux == NULL)
+	new->n = n;
+	new->next = NULL;
+	if (*head == NULL)
 	{
+		new->prev = NULL;
 		*head = new;
+		return (new);
 	}
 	while (aux->next != NULL)
 		aux = aux->next;
-	new->prev = aux;
 	aux->next = new;
+	new->prev = aux;
 	return (new);
 }
