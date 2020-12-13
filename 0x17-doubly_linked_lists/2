@@ -1,6 +1,6 @@
 #include "lists.h"
 
-dlistint_t *create_dnode(int n)
+dlistint_t *create_dnode(const int n)
 {
 	dlistint_t *new;
 
@@ -19,21 +19,18 @@ dlistint_t *create_dnode(int n)
  *
  */
 
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *aux, *new;
 
 	aux = *head;
+	if (aux == NULL)
+		return (NULL);
 	new = create_dnode(n);
 	if (new == NULL)
 		return (NULL);
-	if (aux == NULL)
-	{
-		*head = new;
-	}
-	while (aux->next != NULL)
-		aux = aux->next;
-	new->prev = aux;
-	aux->next = new;
-	return (new);
+	new->next = *head;
+	*head = new;
+	printf("as\n");
+	return (aux);
 }
