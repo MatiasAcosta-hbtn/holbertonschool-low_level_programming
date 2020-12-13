@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+ * add_dnodeint - add a node in the begin
+ * @head: head of the list
+ * @n: data of list
+ * Return: node append
+ */
+
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new;
