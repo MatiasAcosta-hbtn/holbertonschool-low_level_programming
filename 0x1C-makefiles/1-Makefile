@@ -1,0 +1,6 @@
+#Program that compile main program
+CC = gcc
+SRC = main.c holberton.c
+
+all: $(SRC)
+	$(CC) $(SRC) -o holberton
