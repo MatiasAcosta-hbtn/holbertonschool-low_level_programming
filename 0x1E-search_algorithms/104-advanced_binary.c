@@ -20,13 +20,12 @@ int advanced_binary(int *array, size_t size, int value)
 }
 
 /**
- * binary_search_aux - searches for a value in an array of integers
+ * advanced_binary_aux - searches for a value in an array of integers
  * using the Binary search algorithm.
  * @array: array to search.
  * @value: value to search into array.
  * @start: start of array or subarray
  * @end: end of array or subarray
- * @size: size of the array.
  * Return: first index when value is located in array otherwise return -1.
  */
 
