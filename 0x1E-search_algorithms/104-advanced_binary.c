@@ -19,7 +19,7 @@ int advanced_binary(int *array, size_t size, int value)
 	
 	if (index != -1)
 	{
-		while(array[index] == array[index - 1] && index - 1 > 0)
+		while(array[index] == array[index - 1] && index - 1 >= 0)
 		{
 			index--;
 		}
