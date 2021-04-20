@@ -10,7 +10,7 @@
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	int start = 0, end = (int)size - 1, index = 0;
+	int start = 0, end = (int)size - 1;
 
 	if (!array)
 		return (-1);
