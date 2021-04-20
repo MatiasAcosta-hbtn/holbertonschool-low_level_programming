@@ -42,7 +42,7 @@ int advanced_binary_aux(int *array, int value, int start, int end)
 	if (end < start)
 		return (-1);
 
-	mid = (start + end) / 2;
+	mid = start + (end - start) / 2;
 
 	if (array[mid] == value && (mid == start || array[mid - 1] != value))
 		return (mid);
