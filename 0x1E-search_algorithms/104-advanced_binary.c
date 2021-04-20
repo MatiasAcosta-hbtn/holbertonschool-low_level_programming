@@ -15,16 +15,8 @@ int advanced_binary(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	index = binary_search_aux(array, value, start, end, size);
-	
-	if (index != -1)
-	{
-		while(array[index] == array[index - 1] && index - 1 >= 0)
-		{
-			index--;
-		}
-	}
-	return (index);
+	return (advanced_binary_aux(array, value, start, end));
+
 }
 
 /**
@@ -38,7 +30,7 @@ int advanced_binary(int *array, size_t size, int value)
  * Return: first index when value is located in array otherwise return -1.
  */
 
-int binary_search_aux(int *array, int value, int start, int end, int size)
+int advanced_binary_aux(int *array, int value, int start, int end)
 {
 	int mid = 0, i = 0;
 
@@ -48,17 +40,16 @@ int binary_search_aux(int *array, int value, int start, int end, int size)
 		printf("%d", array[i]);
 		printf(i == end ? "\n" : ", ");
 	}
-	if (size == 0)
+	if (end < start)
 		return (-1);
 
 	mid = (start + end) / 2;
 
-	if (array[mid] == value)
+	if (array[mid] == value && (mid == start || array[mid - 1] != value))
 		return (mid);
-	if (value > array[mid])
-		return (binary_search_aux(array, value, mid + 1, end, (size - 1) / 2));
-	if (value < array[mid])
-		return (binary_search_aux(array, value, start, mid - 1, (size - 1) / 2));
-
+	if (array[mid] >= value)
+		return (advanced_binary_aux(array, value, start, mid));
+	if (array[mid] < value)
+		return (advanced_binary_aux(array, value, mid + 1, end));
 	return (-1);
 }
