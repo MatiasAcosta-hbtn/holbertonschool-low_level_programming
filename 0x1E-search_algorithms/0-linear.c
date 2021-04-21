@@ -5,22 +5,22 @@
  * @array: Pointer to the array
  * @size: The size of the array
  * @value: Value to find
+ * Return: index of the element or -1 if not founded
  */
 
 
 int linear_search(int *array, size_t size, int value)
 {
-    size_t i = 0;
-    
-    if (array == NULL || size == 0)
-        return (-1);
-    
-    for (; i < size; i++)
-    {
-        printf("Value checked array[%li] = [%d]\n", i, array[i]);
-        if (array[i] == value)
-            return (i);
-    }
+	size_t index;
 
-    return (-1);
+	if (array == NULL)
+		return (-1);
+
+	for (index = 0; index < size; index++)
+	{
+		printf("Value checked array[%ld] = [%d]\n", index, array[index]);
+		if (array[index] == value)
+			return (index);
+	}
+	return (-1);
 }
