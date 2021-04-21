@@ -2,18 +2,18 @@
 
 /**
  * interpolation_search - search an element using int search algorithm
- * @arr: the array
+ * @array: the array
  * @size: the size of the array
  * @value: value to find
  * Return: the index where is founded or -1
  */
 
-int interpolation_search(int *arr, size_t size, int value)
+int interpolation_search(int *array, size_t size, int value)
 {
-	if (arr == NULL || size == 0)
+	if (array == NULL || size == 0)
 		return (-1);
 
-	return (int_search_aux(arr, 0, size - 1, size, value));
+	return (int_search_aux(array, 0, size - 1, size, value));
 }
 
 /**
@@ -39,12 +39,8 @@ int int_search_aux(int *arr, int start, int end, size_t size, int value)
 		return (-1);
 	}
 	printf("Value checked array[%ld] = [%d]\n", pos, arr[pos]);
-	if (arr[start] == value)
-		return (start);
-	if (arr[end] == value)
-		return (end);
-	if (size == 1 && arr[start] != value)
-		return (-1);
+	if (arr[pos] == value)
+		return (pos);
 
 	if (arr[pos] < value)
 		return (int_search_aux(arr, pos + 1, end, end - pos, value));
