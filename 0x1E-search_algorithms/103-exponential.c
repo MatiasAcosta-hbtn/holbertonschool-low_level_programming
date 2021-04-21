@@ -51,20 +51,24 @@ int exponential_search(int *array, size_t size, int value)
 
 int advanced_binary_aux(int *array, int value, int start, int end)
 {
-	int i;
+	int mid = 0, i = 0;
 
+	printf("Searching in array: ");
+	for (i = start; i <= end; i++)
+	{
+		printf("%d", array[i]);
+		printf(i == end ? "\n" : ", ");
+	}
 	if (end < start)
 		return (-1);
 
-	printf("Searching in array: ");
-	for (i = start; i < end; i++)
-		printf("%d, ", array[i]);
-	printf("%d\n", array[i]);
+	mid = start + (end - start) / 2;
 
-	i = start + (end - start) / 2;
-	if (array[i] == value && (i == start || array[i - 1] != value))
-		return (i);
-	if (array[i] >= value)
-		return (advanced_binary_aux(array, start, i, value));
-	return (advanced_binary_aux(array, i + 1, end, value));
+	if (array[mid] == value && (mid == start || array[mid - 1] != value))
+		return (mid);
+	if (array[mid] >= value)
+		return (advanced_binary_aux(array, value, start, mid));
+	if (array[mid] < value)
+		return (advanced_binary_aux(array, value, mid + 1, end));
+	return (-1);
 }
