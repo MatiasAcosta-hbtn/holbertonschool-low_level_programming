@@ -12,7 +12,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int start = 0, end = (int)size - 1;
 
-	if (!array)
+	if (!array || size == 0)
 		return (-1);
 
 	return (advanced_binary_aux(array, value, start, end));
