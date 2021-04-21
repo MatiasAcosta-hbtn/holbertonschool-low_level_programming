@@ -49,9 +49,9 @@ int exponential_search(int *array, size_t size, int value)
  * Return: first index when value is located in array otherwise return -1.
  */
 
-int advanced_binary_aux(int *array, int value, size_t start, size_t end)
+int advanced_binary_aux(int *array, int value, int start, int end)
 {
-	size_t i;
+	int i;
 
 	if (end < start)
 		return (-1);
