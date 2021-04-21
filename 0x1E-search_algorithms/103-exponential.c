@@ -49,26 +49,22 @@ int exponential_search(int *array, size_t size, int value)
  * Return: first index when value is located in array otherwise return -1.
  */
 
-int advanced_binary_aux(int *array, int value, int start, int end)
+int advanced_binary_aux(int *array, int value, size_t start, size_t end)
 {
-	int mid = 0, i = 0;
+	size_t i;
 
-	printf("Searching in array: ");
-	for (i = start; i <= end; i++)
-	{
-		printf("%d", array[i]);
-		printf(i == end ? "\n" : ", ");
-	}
 	if (end < start)
 		return (-1);
 
-	mid = start + (end - start) / 2;
+	printf("Searching in array: ");
+	for (i = start; i < end; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
 
-	if (array[mid] == value && (mid == start || array[mid - 1] != value))
-		return (mid);
-	if (array[mid] >= value)
-		return (advanced_binary_aux(array, value, start, mid));
-	if (array[mid] < value)
-		return (advanced_binary_aux(array, value, mid + 1, end));
-	return (-1);
+	i = start + (end - start) / 2;
+	if (array[i] == value && (i == start || array[i - 1] != value))
+		return (i);
+	if (array[i] >= value)
+		return (advanced_binary_aux(array, start, i, value));
+	return (advanced_binary_aux(array, i + 1, end, value));
 }
